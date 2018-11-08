@@ -1,0 +1,22 @@
+/* RECEIPT */
+.receipt{
+    overflow-y: scroll;
+    max-height: 350px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.receipt p{
+    margin: 0;
+}
+
+.button-remove{
+    float: right;
+    margin-top: -55px;
+  }
+  
+  
+  .coffe-name{
+    font-weight: bold;
+  }

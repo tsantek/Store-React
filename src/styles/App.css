@@ -1,0 +1,12 @@
+.app-container{
+  min-height: 390px;
+}
+
+.border-line{
+  border-top: 1px solid black;
+}
+
+
+.print-button-col{
+  text-align: center;
+}

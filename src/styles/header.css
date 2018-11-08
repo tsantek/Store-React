@@ -1,0 +1,12 @@
+.header{
+    min-height: 100px;
+}
+
+.shop-name{
+    font-style: italic;
+}
+
+.custemers-name{
+    text-align: center;
+    float: right;
+}
