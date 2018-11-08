@@ -9,6 +9,10 @@
     "react-scripts": "2.1.1",
     "reactstrap": "^6.5.0"
   },
+  "engines": {
+    "npm": "6.4.1",
+    "node": "8.12.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
