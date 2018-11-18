@@ -14,7 +14,7 @@ import Total from './components/Total';
 class App extends Component {
 
   state = {
-    coffes: [
+    coffees: [
       { id: 1, name: 'Aroma Mocha', count: 0, price: 10 },
       { id: 2, name: 'Baristas', count: 0, price: 12 },
       { id: 3, name: 'Tatianas Cafe', count: 0, price: 13 },
@@ -29,28 +29,28 @@ class App extends Component {
     total: 0
   };
 
-  handleAdd = coffe => {      // Adding 1 to count 
-    const coffes = [...this.state.coffes];
-    const index = coffes.indexOf(coffe);
-    coffes[index] = { ...coffe };
-    coffes[index].count++;
-    this.setState({ coffes });
+  handleAdd = coffee => {      // Adding 1 to count 
+    const coffees = [...this.state.coffees];
+    const index = coffees.indexOf(coffee);
+    coffees[index] = { ...coffee };
+    coffees[index].count++;
+    this.setState({ coffees });
     // Total price
-    const result = coffe.price;
+    const result = coffee.price;
     this.setState({ total: result + this.state.total });
   };
 
-  handleRemove = coffe => {   //removing 1 of count
+  handleRemove = coffee => {   //removing 1 of count
     const total = this.state.total;
     this.setState({
-      coffe: [
-        coffe.count = coffe.count - 1
+      coffee: [
+        coffee.count = coffee.count - 1
       ],
-      total: total - coffe.price
+      total: total - coffee.price
     })
 
-    console.log(coffe.count);
-    console.log(this.state.coffes);
+    console.log(coffee.count);
+    console.log(this.state.coffees);
   }
 
   refreshPage() {  // reload app
@@ -63,8 +63,8 @@ class App extends Component {
       <div className="container">
         <Header name={this.state.name} nameCustomer={this.nameCustomer} />
         <div className="row app-container">
-          <div className="col-8"><ItemsList coffes={this.state.coffes} handleAdd={this.handleAdd} /></div>
-          <div className="col-4"><Receipt coffes={this.state.coffes} handleRemove={this.handleRemove} /></div>
+          <div className="col-8"><ItemsList coffees={this.state.coffees} handleAdd={this.handleAdd} /></div>
+          <div className="col-4"><Receipt coffees={this.state.coffees} handleRemove={this.handleRemove} /></div>
         </div>
         <div className="row border-line">
           <div className="col">

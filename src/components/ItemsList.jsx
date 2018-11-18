@@ -6,11 +6,11 @@ class ItemsList extends Component {
     render() {
         return (
             <ul>
-                {this.props.coffes.map(coffe => {
+                {this.props.coffees.map(coffee => {
                     return (
-                        <li onClick={() => this.props.handleAdd(coffe)} key={coffe.id}>
-                            <p>{coffe.name}</p>
-                            <p>{coffe.price}$</p>
+                        <li onClick={() => this.props.handleAdd(coffee)} key={coffee.id}>
+                            <p>{coffee.name}</p>
+                            <p>{coffee.price}$</p>
                         </li>
                     )
                 })}
